@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-scroll';
-import * as FaIcons from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -47,28 +47,28 @@ const Footer: React.FC = () => {
                 className="bg-gray-800 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
-                {React.createElement(FaIcons.FaFacebook)}
+                <FaFacebook />
               </a>
               <a 
                 href="#" 
                 className="bg-gray-800 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Twitter"
               >
-                {React.createElement(FaIcons.FaTwitter)}
+                <FaTwitter />
               </a>
               <a 
                 href="#" 
                 className="bg-gray-800 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
-                {React.createElement(FaIcons.FaInstagram)}
+                <FaInstagram />
               </a>
               <a 
                 href="#" 
                 className="bg-gray-800 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
                 aria-label="LinkedIn"
               >
-                {React.createElement(FaIcons.FaLinkedin)}
+                <FaLinkedin />
               </a>
             </div>
           </div>
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                 <ul className="space-y-2">
                   {footerLinks.product.map((link, index) => (
                     <li key={index}>
-                      <Link
+                      <ScrollLink
                         to={link.to}
                         spy={true}
                         smooth={true}
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                         className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                       >
                         {link.label}
-                      </Link>
+                      </ScrollLink>
                     </li>
                   ))}
                 </ul>
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
                 <ul className="space-y-2">
                   {footerLinks.company.map((link, index) => (
                     <li key={index}>
-                      <Link
+                      <ScrollLink
                         to={link.to}
                         spy={true}
                         smooth={true}
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
                         className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                       >
                         {link.label}
-                      </Link>
+                      </ScrollLink>
                     </li>
                   ))}
                 </ul>
@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
                 <ul className="space-y-2">
                   {footerLinks.support.map((link, index) => (
                     <li key={index}>
-                      <Link
+                      <ScrollLink
                         to={link.to}
                         spy={true}
                         smooth={true}
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
                         className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                       >
                         {link.label}
-                      </Link>
+                      </ScrollLink>
                     </li>
                   ))}
                 </ul>
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
             © {currentYear} MemoTag. All rights reserved.
           </p>
           
-          <Link
+          <ScrollLink
             to="hero"
             spy={true}
             smooth={true}
@@ -151,8 +151,8 @@ const Footer: React.FC = () => {
             duration={500}
             className="mt-4 md:mt-0 bg-gray-800 hover:bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
           >
-            {React.createElement(FaIcons.FaArrowUp)}
-          </Link>
+            <FaArrowUp />
+          </ScrollLink>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaLocationArrow, FaPaperPlane, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaLocationArrow, FaPaperPlane, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <FaEnvelope />,
+      icon: <FaPaperPlane />,
       title: 'Email',
       content: 'info@memotag.io',
       link: 'mailto:info@memotag.io'

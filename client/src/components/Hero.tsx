@@ -42,13 +42,13 @@ const Hero: React.FC = () => {
   };
 
   const floatAnimation = {
-    hidden: { y: 0 },
+    hidden: { y: 20 },
     float: {
-      y: [-10, 10],
+      y: [-5, 5],
       transition: {
         duration: 2,
         repeat: Infinity,
-        repeatType: "reverse",
+        repeatType: "reverse" as const,
         ease: "easeInOut"
       }
     }
